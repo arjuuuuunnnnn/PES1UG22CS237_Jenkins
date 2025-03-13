@@ -17,11 +17,13 @@ pipeline {
                 sh 'echo "Repository cloned successfully"'
             }
         }
-		
-		stage('Install dependencies') {
-			steps {
-				sh 'g++ --version'
-				sh 'echo "Compiler check completed"'
+        
+        stage('Install dependencies') {
+            steps {
+                sh 'g++ --version'
+                sh 'echo "Compiler check completed"'
+            }
+        }
         
         stage('Build application') {
             steps {
