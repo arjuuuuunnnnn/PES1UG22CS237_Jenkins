@@ -16,14 +16,14 @@ pipeline {
         
         stage('Install dependencies') {
             steps {
-                sh 'g++ --version || echo "g++ not installed"'
+                sh 'g+ --version'
                 sh 'echo "Compiler check completed"'
             }
         }
         
         stage('Build application') {
             steps {
-                sh 'g+ -o ${SRN}-1 main/hello.cpp || echo "Build failed - g++ not available"'
+                sh 'g++ -o ${SRN}-1 main/hello.cpp || echo "Build failed - g++ not available"'
                 sh 'echo "Build step completed"'
             }
         }
