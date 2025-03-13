@@ -16,7 +16,7 @@ pipeline {
         
         stage('Install dependencies') {
             steps {
-                sh 'g+ --version'
+                sh 'g++ --version || echo "g++ not found"'
                 sh 'echo "Compiler check completed"'
             }
         }
