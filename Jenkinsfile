@@ -9,8 +9,8 @@ pipeline {
     stages {
         stage('Clone repository') {
             steps {
-                sh 'git clone --branch main ${REPO_URL} .'
-                sh 'echo "Repository cloned successfully"'
+                // Skip cloning since Jenkins already checked out the repository
+                sh 'echo "Repository already checked out by Jenkins"'
             }
         }
         
